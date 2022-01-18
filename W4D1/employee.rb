@@ -5,10 +5,9 @@
 # end
 
 class Employee
-    extend Raiseable
     attr_reader :title, :boss
     attr_accessor :salary
-    def initialize(name)
+    def initialize(name, title, salary, boss)
         @title = title
         @salary = salary
         @boss = boss
