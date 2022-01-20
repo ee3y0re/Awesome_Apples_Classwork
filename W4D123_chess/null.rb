@@ -6,4 +6,8 @@ class Null
     def initialize
         @symbol = "null"
     end
+
+    def inspect
+        { "symbol" => @symbol }.inspect
+    end
 end

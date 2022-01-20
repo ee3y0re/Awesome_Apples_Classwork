@@ -1,11 +1,23 @@
 require_relative 'null.rb' #unintialized constant
 require_relative 'piece.rb'
+require_relative 'pawn.rb'
 
 class Board
 
+  attr_reader :rows
   def initialize
-    @rows = Array.new(4){Array.new(4, Null.instance)}
-    @rows[0][0] = Piece.new
+    @rows = Array.new(8){Array.new(8, Null.instance)}
+    pawn_creator("black", "white")
+  end
+
+  def pawn_creator(color1, color2)
+    (0...@rows[0].length).each do |i|
+      self[[1, i]] = Pawn.new(color1, self, [1, i]) #first color on top
+    end
+
+    (0...@rows[0].length).each do |i|
+      self[[6, i]] = Pawn.new(color2, self, [6, i]) #second color on bottom
+    end
   end
 
   def [](pos)
