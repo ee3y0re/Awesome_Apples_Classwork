@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 source 'https://rubygems.org'
 
 gem 'rspec', "~> 3.8.0"
 gem 'byebug'
 gem 'pry'
 gem 'activesupport'
+=======
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+gem "pry"
+gem "rspec"
+
+# gem "rails"
+>>>>>>> 6f7fe8fe486a83eb41c0998f3d9398b69d5414d7
