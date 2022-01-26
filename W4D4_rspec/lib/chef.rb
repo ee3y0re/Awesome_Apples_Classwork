@@ -1,3 +1,5 @@
+# require 'dessert.rb'
+
 class Chef
   attr_reader :name
 
